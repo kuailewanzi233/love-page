@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>丸子的爱</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #fff;
+            overflow: hidden;
+            flex-direction: column;
+        }
+        .heart {
+            position: relative;
+            width: 57vmin; /* 调整大小 */
+            height: 57vmin; /* 调整大小 */
+            background-color: red;
+            transform: rotate(-45deg);
+            margin-top: 10vh; /* 向下移动 */
+        }
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 57vmin; /* 调整大小 */
+            height: 57vmin; /* 调整大小 */
+            background-color: red;
+            border-radius: 50%;
+        }
+        .heart::before {
+            top: -28.5vmin;
+            left: 0;
+        }
+        .heart::after {
+            top: 0;
+            left: 28.5vmin;
+        }
+        .message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* 不再旋转 */
+            color: white;
+            font-size: 5vmin;
+            text-align: center;
+            width: 60vmin;
+            z-index: 10; /* 确保文字在最顶层 */
+            font-weight: bold; /* 加粗字体 */
+        }
+    </style>
+</head>
+<body>
+    <div class="heart"></div>
+    <div class="message">丸子很爱你</div>
+</body>
+</html>
